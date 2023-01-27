@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+export Header {
+  font-family: "Caveat";
+  color: #0e3c7e;
+  width: 100%;
+  box-shadow: 0px 5px 5px gray;
+  margin: 0%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}

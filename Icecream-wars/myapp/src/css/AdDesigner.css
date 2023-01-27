@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+.vote-box {
+  border: solid #222 3px;
+  box-shadow: 3px grey;
+
+  height: 150px;
+  width: 250px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #222;
+  border: solid white 3px;
+  box-shadow: 3px grey;
+  height: 150px;
+  width: 250px;
+}
+.vote-for {
+  display: flex;
+  justify-content: center;
+}
+
+.adDesignerFont {
+  font-family: "Caveat";
+}
+
+.vote-font {
+  font-family: "Caveat";
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #0e3c7e;
+  padding: 3px;
+  color: white;
+}
+
+button:disabled {
+  background-color: grey;
+}
+
+button:active {
+  background-color: #1e60a9;
+}
