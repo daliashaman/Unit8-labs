@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function ArraysEx() {
     const [colors, setColors] = useState<string[]>(["red", "orange", "purple", "green"])
-    const [pets, setPets] = useState(
+    const [pets, setPets] = useState<Pets[]>(
         [{name: "Strudel", type: "dog", id: 1 },
         { name: "Timmy", type: "turtle", id: 2 },
         { name: "Coco", type: "cat", id: 3 }]);
@@ -27,9 +27,21 @@ return (
     <button onClick={() => addColor('Blue')}>Blue</button>
     <button onClick={() => addColor('Yellow')}>Yellow</button>
 </div>
-<h2>Pets</h2>
-<table>
-    {pets.map((pet) => (<tr key={pet.id}> {pet.name} - {pet.type}</tr>))}
-    </table>
+
+<div>
+    <h2>Pets</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+            </tr>
+            {pets.map((pet, i) => (
+                <tr key={pet.id}>
+                    <td>{pet.name}</td>
+                    <td>{pet.type}</td>
+                </tr>
+                ))}
+        </table>
+</div>
 </>
 )};
