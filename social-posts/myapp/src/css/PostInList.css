@@ -1,0 +1,12 @@
+.postTitle {
+    font-family: "Dosis", sans-serif;
+    margin: 2px;
+  }
+  .PostInList {
+    min-width: fit-content;
+    font-size: 22px;
+  }
+  
+  .PostInList p {
+    margin: 2px;
+  }
