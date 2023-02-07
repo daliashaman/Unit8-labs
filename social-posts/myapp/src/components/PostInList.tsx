@@ -3,21 +3,18 @@ import "../css/PostInList.css";
 
 export interface PostInListProps {
 post: Post;
+onDelete: () => void;
 }
 
-export function PostInList (props: PostInListProps){
-
-    function onDelete(){
-
-    };
+export function PostInList ({post, onDelete}: {post: Post, onDelete: () => void}){
 
     return(
         <div className="PostInList">
             <div className="post-main">
-                <h3>{props.post.title}</h3>
-                <p>{props.post.thought}</p>
+                <h3>{post.title}</h3>
+                <p>{post.thought}</p>
             </div>
-            <div className="post-delete" onClick={onDelete}><i className="fa-solid fa-trash"></i></div>
+            <div className="post-delete" onClick={onDelete}>Delete</div>
         </div>
     );
 }

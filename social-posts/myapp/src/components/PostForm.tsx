@@ -3,36 +3,25 @@ import Post from "./Post";
 import { ButtonToggle } from 'reactstrap';
 import "../css/PostForm.css";
 
-export interface PostFormProps{
-    addPost: Function;
-}
-
-export function PostForm (props: PostFormProps){
+export function PostForm ({ onSubmitForm, onClose} : {onSubmitForm: (post: Post) => void; onClose: () => void}) {
     const [title, setTitle] = useState<string>("");
     const [thought, setThought] = useState<string>("");
     
 
-function onSubmitForm(e:React.FormEvent<HTMLElement>) {
-    e.preventDefault();
-    props.addPost({title: title, thought: thought})
-
-}
-    const newPost: Post = {
-        title: title,
-        thought: thought,
-    };
-
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        onSubmitForm({ title, thought });
+  
+      };
     return (
-        <div className="PostForm">
-            <div className="form">
-               <form onSubmit={onSubmitForm}>
-                <label>Title</label>
-                <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Title"></input>
-                <label>Thought</label>
-                <input onChange={(e) => setThought(e.target.value)} id="thought" placeholder="What are your thoughts?"></input>
-                <button className='post-button' type="submit" onSubmit={onSubmitForm}>Add Post</button>
-            </form>  
-            </div>   
+        <div className="PostForm" onSubmit={handleSubmit}>
+           <button className="close-button" onClick={onClose}>X</button>
+           <h2>New Thought</h2>
+            <label>Title</label>
+            <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Title"></input>
+            <label>Thought</label>
+            <input onChange={(e) => setThought(e.target.value)} id="thought" placeholder="What are your thoughts?"></input>
+            <button className='post-button' type="submit">Add Post</button> 
         </div>
     )
 }

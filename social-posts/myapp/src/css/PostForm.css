@@ -7,13 +7,6 @@
     width: 50%;
     box-shadow: 0 0px 6px 2px black;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-  }
 
 label {
     margin-left: 20px;
@@ -25,6 +18,8 @@ input {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .post-button {
@@ -34,4 +29,22 @@ input {
   border-radius: 5px;
   margin-top: 10px;
   padding: 10px 0px;
+}
+
+.close-button{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #79c5e8;
+  border: 0px;
+} 
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#thought {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 10px;
 }

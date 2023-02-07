@@ -1,6 +1,7 @@
 import React from 'react';
+import SocialPosts from './components/SocialPosts';
 import logo from './logo.svg';
-import { SocialPosts } from './components/SocialPosts';
+
 
 function App() {
   return (
