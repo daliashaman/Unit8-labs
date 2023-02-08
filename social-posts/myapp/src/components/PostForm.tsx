@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Post from "./Post";
-import { ButtonToggle } from 'reactstrap';
 import "../css/PostForm.css";
 
 export function PostForm ({ onSubmitForm, onClose} : {onSubmitForm: (post: Post) => void; onClose: () => void}) {
@@ -15,7 +14,8 @@ export function PostForm ({ onSubmitForm, onClose} : {onSubmitForm: (post: Post)
       };
     return (
         <div className="PostForm" onSubmit={handleSubmit}>
-           <button className="close-button" onClick={onClose}>X</button>
+           <button className="close-button" onClick={onClose}><b>X</b></button>
+    
            <h2>New Thought</h2>
             <label>Title</label>
             <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Title"></input>
